@@ -1,0 +1,26 @@
+@layer pico;
+@import 'pico/css/pico.min.css' layer(pico);
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav {
+  width: 100%;
+}
+
+footer {
+  padding: 1rem;
+  margin-top: auto;
+}
