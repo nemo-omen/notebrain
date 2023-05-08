@@ -13,7 +13,7 @@
 		<label for="password">Password</label>
 		<input type="password" name="password" id="password" />
 		<label for="password-confirm">Confirm Password</label>
-		<input type="password" name="password-confirm" id="password-confirm" />
+		<input type="password" name="passwordConfirm" id="passwordConfirm" />
 		<input type="submit" value="Register" />
 	</form>
 </div>

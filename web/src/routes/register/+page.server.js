@@ -1,18 +1,22 @@
+import { error, redirect } from '@sveltejs/kit';
 import { generateUsername } from '$lib/utils.js';
 
 export const actions = {
-  registerAction: async({locals, request}) => {
-    const body = Object.fromEntries(await request.formData());
-    let userName = generateUsername(body.name.split(' ').join('')).toLowerCase();
+	register: async ({ locals, request }) => {
+		const body = Object.fromEntries(await request.formData());
+		const username = generateUsername(body.name.split(' ').join('')).toLowerCase();
+		const userData = { username, ...body };
 
-    try {
-      await locals.pb.collection('users').create({username, ...body});
-      await locals.pb.collection('users').requestVerification(body.email);
-    }catch(error) {
-      console.error(error);
-      throw error(500, 'Something went wrong');
-    }
+		console.log({ userData });
 
-    throw redirect(303, '/login');
-  }
-}
+		try {
+			await locals.pb.collection('users').create(userData);
+			await locals.pb.collection('users').requestVerification(userData.email);
+		} catch (err) {
+			console.error('Error: ', err);
+			throw error(500, 'Something went wrong');
+		}
+
+		throw redirect(303, '/login');
+	}
+};
