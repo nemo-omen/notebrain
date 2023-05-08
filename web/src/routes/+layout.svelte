@@ -1,5 +1,6 @@
 <script>
-	import '../style/app.css';
+	import '$lib/style/main.css';
+	import '$lib/style/pico/css/pico.min.css';
 	export let data;
 </script>
 

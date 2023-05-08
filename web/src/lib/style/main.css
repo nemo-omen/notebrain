@@ -1,5 +1,5 @@
-@layer pico;
-@import 'pico/css/pico.min.css' layer(pico);
+/* /* @layer pico; */
+/* @import url("./pico/css/pico.min.css") layer(pico); */
 
 body {
   display: flex;
