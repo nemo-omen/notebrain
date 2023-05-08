@@ -1,5 +1,4 @@
 <h1>Goals</h1>
-These are
 <h2>General</h2>
 <ul>
 	<li>Rss reader</li>
