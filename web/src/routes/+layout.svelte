@@ -8,7 +8,7 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="/"><strong>NB</strong></a>
+				<a href="/" class="brand">NB</a>
 			</li>
 		</ul>
 		<ul>
@@ -21,7 +21,9 @@
 				</li>
 			{:else}
 				<li>
-					<a href="/login" class="button">Sign In</a>
+					<form action="/logout" method="post" style="margin: 0; padding: 0;">
+						<button type="submit" style="margin: 0; padding: 0.5em">Sign Out</button>
+					</form>
 				</li>
 			{/if}
 		</ul>
