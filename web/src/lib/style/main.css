@@ -19,14 +19,24 @@ header {
   padding: 1rem 1.5rem;
 }
 
-nav {
+header nav {
+  align-items: center;
   width: 100%;
+}
+
+nav ul {
+  gap: 2rem;
 }
 
 nav ul,
 nav ul li {
   padding: 0;
   margin: 0;
+}
+
+nav ul li button,
+nav ul li .button {
+  padding: 0.25em 0.5em;
 }
 
 footer {
